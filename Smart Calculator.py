@@ -1,3 +1,4 @@
+import unittest
 import os
 import json
 
@@ -57,23 +58,29 @@ class FileManager:
         else:
             return None
 
-def main():
-    calculator = SmartCalculator()
-    file_manager = FileManager()
+class TestSmartCalculator(unittest.TestCase):
+    def setUp(self):
+        self.calculator = SmartCalculator()
 
-    num1 = float(input("Enter the first number: "))
-    operation = input("Enter the operation (+, -, *, /): ")
-    num2 = float(input("Enter the second number: "))
+    def test_addition(self):
+        result = self.calculator.calculate('+', 5, 3)
+        self.assertEqual(result, 8)
 
-    result = calculator.calculate(operation, num1, num2)
-    print("Result:", result)
+    def test_subtraction(self):
+        result = self.calculator.calculate('-', 5, 3)
+        self.assertEqual(result, 2)
 
-    filename = 'calculator_result.json'
-    file_manager.save_to_file(filename, {'num1': num1, 'operation': operation, 'num2': num2, 'result': result})
-    print("Data saved to file.")
+    def test_multiplication(self):
+        result = self.calculator.calculate('*', 5, 3)
+        self.assertEqual(result, 15)
 
-    data = file_manager.read_from_file(filename)
-    print("Data read from file:", data)
+    def test_division(self):
+        result = self.calculator.calculate('/', 10, 2)
+        self.assertEqual(result, 5)
+
+    def test_division_by_zero(self):
+        result = self.calculator.calculate('/', 10, 0)
+        self.assertEqual(result, "Error: Division by zero!")
 
 if __name__ == "__main__":
-    main()
+    unittest.main()
