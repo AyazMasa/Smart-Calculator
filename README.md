@@ -1,5 +1,5 @@
 # Smart Calculator
-
+## Created by Ayaz Masa
  ## 1. Introduction
 
 The Smart Calculator application is a Python program designed to perform basic arithmetic operations using object-oriented programming principles.
@@ -247,7 +247,7 @@ To run the created executable file (`Smart_Calculator.exe`), follow these steps:
 ## Results and Summary
 
 - The Smart Calculator program successfully performs basic arithmetic operations.
-- Challenges were faced during the implementation, especially in handling division by zero.
+- Challenges were faced during the implementation, especially in converting Python script into an executable (.exe) file.
 - The program demonstrates the effective use of object-oriented programming principles for building a calculator application.
 
 ## Conclusions
