@@ -1,8 +1,10 @@
 import unittest
 import os
 import json
+import sys
+from abc import ABC
 
-class Operation:
+class Operation(ABC):
     def operate(self, num1, num2):
         pass
 
@@ -83,4 +85,17 @@ class TestSmartCalculator(unittest.TestCase):
         self.assertEqual(result, "Error: Division by zero!")
 
 if __name__ == "__main__":
-    unittest.main()
+    if len(sys.argv) > 1 and sys.argv[1] == "--test":
+        unittest.main(argv=sys.argv[:1])  
+    else:
+        calculator = SmartCalculator()
+        while True:
+            operation = input("Enter operation (+, -, *, /) or 'exit' to quit: ")
+            if operation == 'exit':
+                break
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+            result = calculator.calculate(operation, num1, num2)
+            print("Result:", result)
+
+input("Press Enter to exit...")
