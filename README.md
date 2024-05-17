@@ -2,11 +2,10 @@
 ## Created by Ayaz Masa
  ## 1. Introduction
  ## Screenshot of Smart Calculator .exe file
-1. [Screenshot 1]((https://github.com/AyazMasa/Smart-Calculator/assets/168372712/7a4d8236-bc66-42f8-ab33-e9dd31d21b7a)
-)
+1. [Screenshot 1](https://github.com/AyazMasa/Smart-Calculator/assets/168372712/7a4d8236-bc66-42f8-ab33-e9dd31d21b7a)
 
-2. [Screenshot 2]((https://github.com/AyazMasa/Smart-Calculator/assets/168372712/63b19fad-06de-41e9-983f-83abe96589d5)
-)
+2. [Screenshot 2](https://github.com/AyazMasa/Smart-Calculator/assets/168372712/63b19fad-06de-41e9-983f-83abe96589d5)
+
 
 
 The Smart Calculator application is a Python program designed to perform basic arithmetic operations using object-oriented programming principles.
